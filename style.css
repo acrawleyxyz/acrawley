@@ -66,7 +66,7 @@ input, textarea, select
     cursor: pointer !important;
 }
 
-.header-search
+/*.header-search
 {
     background-color: #E2E0E0;
     padding: 100px 0;
@@ -116,7 +116,7 @@ input, textarea, select
     color: #a1a1a1;
     font-weight: 400;
     opacity: 1;
-}
+}*/
 
 .header-holder
 {

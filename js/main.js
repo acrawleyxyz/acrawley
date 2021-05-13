@@ -120,7 +120,7 @@ jQuery(document).ready(function () {
 jQuery(window).load(function () {
 
 //Fix for header menu
-    jQuery('.header-search').css('margin-top', 0 - jQuery('.header-search').innerHeight());
+    // jQuery('.header-search').css('margin-top', 0 - jQuery('.header-search').innerHeight());
 
 //Set menu
     jQuery('.main-menu').smartmenus({
@@ -151,7 +151,7 @@ jQuery(window).load(function () {
 
 
 //Show-Hide header sidebar
-    jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
+    // jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
 
 //Set each image slider
     jQuery(".image-slider").each(function () {
@@ -265,9 +265,9 @@ jQuery(window).resize(function () {
 
 
     //Fix for header menu
-    if (!jQuery('.header-search').hasClass("open")) {
-        jQuery('.header-search').css('margin-top', 0 - jQuery('.header-search').innerHeight());
-    }
+    // if (!jQuery('.header-search').hasClass("open")) {
+    //     jQuery('.header-search').css('margin-top', 0 - jQuery('.header-search').innerHeight());
+    // }
 
     //Fix for WP menu admin bar 
     jQuery('#main-menu').css('margin-top', jQuery('#wpadminbar').height());
@@ -291,25 +291,25 @@ var contactFormWidthFix = function () {
     jQuery('.wpcf7 input[type=text], .wpcf7 input[type=email], .wpcf7 textarea').innerWidth(jQuery('.wpcf7-form').width());
 };
 
-var multiClickFunctionStop = function (e) {
-    e.preventDefault();
-    jQuery('#toggle, .header-hidden-search a').off("click");
-    jQuery('#toggle, .header-hidden-search a').toggleClass("on");
-    if (jQuery('#toggle, .header-hidden-search a').hasClass("on"))
-    {
-        jQuery('html, body').animate({scrollTop: 0}, 200);
+// var multiClickFunctionStop = function (e) {
+//     e.preventDefault();
+//     jQuery('#toggle, .header-hidden-search a').off("click");
+//     jQuery('#toggle, .header-hidden-search a').toggleClass("on");
+//     if (jQuery('#toggle, .header-hidden-search a').hasClass("on"))
+//     {
+//         jQuery('html, body').animate({scrollTop: 0}, 200);
 
-        jQuery('.header-search').addClass('open').animate({'marginTop': '0'}, function () {
-            jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
-        });
-    } else
-    {
-        jQuery('.header-search').removeClass('open').animate({'marginTop': 0 - jQuery('.header-search').innerHeight()}, function () {
-            jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
-        });
-    }
+//         jQuery('.header-search').addClass('open').animate({'marginTop': '0'}, function () {
+//             jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
+//         });
+//     } else
+//     {
+//         jQuery('.header-search').removeClass('open').animate({'marginTop': 0 - jQuery('.header-search').innerHeight()}, function () {
+//             jQuery('#toggle, .header-hidden-search a').on("click", multiClickFunctionStop);
+//         });
+//     }
 
-};
+// };
 
 function is_touch_device() {
     return !!('ontouchstart' in window);
