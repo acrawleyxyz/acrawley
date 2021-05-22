@@ -748,11 +748,11 @@ div.pp_default .pp_loaderIcon
     font-size: 20px;
     transition: color .2s linear, background-color .2s linear, border-color .2s linear;
 }
-.contact-form input[type=submit]:hover
+/*.contact-form input[type=submit]:hover
 {
     color: #FD3137;
     border-color: #FD3137;
-}
+}*/
 
 .contact-form input[type=text]::-webkit-input-placeholder, .contact-form input[type=email]::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder
 {
