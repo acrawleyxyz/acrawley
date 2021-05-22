@@ -143,10 +143,36 @@
                 </article>
             </div>
             <!-- End .body-border -->
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="randomImage">
+              <!-- <div class="row justify-content-center"><button id="again" class="btn btn-primary">Show me another</button></div> -->
+              <div class="contact-form"> <input type="submit" onclick="document.getElementById('randomImage').src = 'images/portfolio/ran' + Math.floor(Math.random() * (26 - 1) + 1).toString() + '.jpg'" value="Show me another"></div>
+            </div>
         </div>
 
 
+        <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var rand = document.getElementById("random");
+        var modalImg = document.getElementById("randomImage");
+        rand.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = "images/portfolio/ran" + Math.floor(Math.random() * (26 - 1) + 1).toString() + ".jpg"//this.src;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
         <!--Load JavaScript-->
         <script src="js/jquery.js"></script>			                                       
         <script src='js/jquery.fitvids.js'></script>
